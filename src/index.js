@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CookiesProvider } from 'react-cookie';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#BDA563',
+    },
+    secondary: {
+      main: '#fbdf7d',
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CookiesProvider>
+        <App />
+      </CookiesProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

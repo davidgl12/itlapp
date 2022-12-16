@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import {LoginForm} from './components/LoginForm';
+import {MainDashboard} from './components/dashboard/MainDashboard';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+import { useCookies } from 'react-cookie';
+
 
 function App() {
+
+  const [cookies] = useCookies(['itlappContrasenia']);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    
+
+    <Router>
+      <Routes>
+        {
+          cookies.itlappContrasenia ?
+          <Route exact path="/" element={<Navigate replace to="/dashboard" />}/> :
+          <Route path="/" element={<LoginForm/>} />
+        }
+        <Route path="/dashboard" element={<MainDashboard/>} />
+      </Routes>
+    </Router>
+    </>
   );
 }
 
