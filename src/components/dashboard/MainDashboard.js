@@ -18,7 +18,7 @@ export function MainDashboard() {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await postData('http://localhost:3001/alumno', {
+            const res = await postData('http://3.138.179.79:3001/alumno', {
                 noCtrl: cookies.itlappNoctrl,
                 contrasenia: cookies.itlappContrasenia
             });

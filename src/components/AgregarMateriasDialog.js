@@ -12,7 +12,7 @@ export default function AgregarMateriasDialog({dialogOpen, setDialogOpen, materi
 
     useEffect(() => {
         async function fetchDatos() {
-            const res = await getData('http://localhost:3001/materias');
+            const res = await getData('http://3.138.179.79:3001/materias');
             setDatos(res);
         }
         fetchDatos();

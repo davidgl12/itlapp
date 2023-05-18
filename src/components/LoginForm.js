@@ -63,7 +63,7 @@ import { getData, postData } from '../services';
     }
 
     const handleLogin = async () => {
-        const user = await postData('http://localhost:3001/alumno', loginData);
+        const user = await postData('http://3.138.179.79:3001/alumno', loginData);
         console.log({user});
         if(user) {
             console.log('in')
@@ -78,7 +78,7 @@ import { getData, postData } from '../services';
 
     const handleCrearCuenta = async () => {
         console.log('AAAAAAAAAAA')
-        const user = await postData('http://localhost:3001/alumno/crear', {
+        const user = await postData('http://3.138.179.79:3001/alumno/crear', {
             ...newData,
             materias
         });

@@ -17,8 +17,8 @@ export default function MateriasCursandoDialog({dialogOpen, setDialogOpen, mater
 
     useEffect(() => {
         async function fetchDatos() {
-            const resDatos = await getData('http://localhost:3001/materias');
-            const resHorarios = await getData('http://localhost:3001/horarios');
+            const resDatos = await getData('http://3.138.179.79:3001/materias');
+            const resHorarios = await getData('http://3.138.179.79:3001/horarios');
             setDatos(resDatos);
             setHorarios(resHorarios)
         }
@@ -72,7 +72,7 @@ export default function MateriasCursandoDialog({dialogOpen, setDialogOpen, mater
     }
 
     function guardarMateriasCursando() {
-        putData('http://localhost:3001/alumno/materiasCursando', {
+        putData('http://3.138.179.79:3001/alumno/materiasCursando', {
             materiasCursando: materias,
             noCtrl: alumno.noctrl
         })

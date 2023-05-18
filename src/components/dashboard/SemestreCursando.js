@@ -11,7 +11,7 @@ export default function SemestreCursando({alumno, setAlumno}) {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await postData('http://localhost:3001/materias', {
+            const res = await postData('http://3.138.179.79:3001/materias', {
                 ids: alumno.materias_cursando
             });
 
@@ -33,8 +33,8 @@ export default function SemestreCursando({alumno, setAlumno}) {
             }
             setAlumno(newAlumno);
             setMateriasCursando(materiasCursando.filter(mat => mat.id !== materiaId));
-            await putData('http://localhost:3001/alumno/materiasCursando', {materiasCursando: newMateriasCursando, noCtrl: alumno.noctrl});
-            await putData('http://localhost:3001/alumno/materiasCursadas', {materiasCursadas: alumno.materias_cursadas, noCtrl: alumno.noctrl});
+            await putData('http://3.138.179.79:3001/alumno/materiasCursando', {materiasCursando: newMateriasCursando, noCtrl: alumno.noctrl});
+            await putData('http://3.138.179.79:3001/alumno/materiasCursadas', {materiasCursadas: alumno.materias_cursadas, noCtrl: alumno.noctrl});
 
         }
     }
@@ -49,7 +49,7 @@ export default function SemestreCursando({alumno, setAlumno}) {
             }
             setAlumno(newAlumno);
             setMateriasCursando(materiasCursando.filter(mat => mat.id !== materiaId));
-            await putData('http://localhost:3001/alumno/materiasCursando', {materiasCursando: newMateriasCursando, noCtrl: alumno.noctrl});
+            await putData('http://3.138.179.79:3001/alumno/materiasCursando', {materiasCursando: newMateriasCursando, noCtrl: alumno.noctrl});
         }
     }
 
