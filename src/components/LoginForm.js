@@ -69,7 +69,7 @@ import { getData, postData } from '../services';
             console.log('in')
             setCookies('itlappNoctrl', loginData.noCtrl);
             setCookies('itlappContrasenia', loginData.contrasenia);
-            window.location.assign('http://localhost:3000/dashboard');
+            window.location.assign('https://master.d3vbd9wfgkadre.amplifyapp.com/dashboard');
         } else {
             console.log('out')
             alert('No existe el usuario, intenta nuevamente');
@@ -88,7 +88,7 @@ import { getData, postData } from '../services';
             console.log({user});
             setCookies('itlappNoctrl', newData.noCtrl);
             setCookies('itlappContrasenia', newData.contrasenia);
-            window.location.assign('http://localhost:3000/dashboard');
+            window.location.assign('https://master.d3vbd9wfgkadre.amplifyapp.com/dashboard');
         } else {
             console.log('out')
             alert('No existe el usuario, intenta nuevamente');
