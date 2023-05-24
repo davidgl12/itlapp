@@ -3,8 +3,8 @@ import {Configuration, OpenAIApi} from 'openai';
 import { WidthFull } from '@mui/icons-material';
 
 const configuration = new Configuration({
-  organization: "org-0XpXovab9tULjv34eRGiqx6C",
-  apiKey: "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",
+  organization: process.env.ORGANIZATION,
+  apiKey: process.env.APIKEY,
 })
 
 const openai = new OpenAIApi(configuration);
