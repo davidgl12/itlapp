@@ -3,12 +3,12 @@ import {Configuration, OpenAIApi} from 'openai';
 import { WidthFull } from '@mui/icons-material';
 
 const configuration = new Configuration({
-  organization: process.env.REACT_APP_ORGANIZATION,
-  apiKey: process.env.REACT_APP_APIKEY,
+  organization: process.env.ORGANIZATION,
+  apiKey: process.env.APIKEY,
 })
 
-console.log("Organization: ", process.env.REACT_APP_ORGANIZATION);
-console.log("Apikey: ", process.env.REACT_APP_APIKEY);
+console.log("Organization: ", process.env.ORGANIZATION);
+console.log("Apikey: ", process.env.APIKEY);
 console.log(process.env.NODE_ENV)
 
 const openai = new OpenAIApi(configuration);
