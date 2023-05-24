@@ -3,9 +3,13 @@ import {Configuration, OpenAIApi} from 'openai';
 import { WidthFull } from '@mui/icons-material';
 
 const configuration = new Configuration({
-  organization: process.env.ORGANIZATION,
-  apiKey: process.env.APIKEY,
+  organization: process.env.REACT_APP_ORGANIZATION,
+  apiKey: process.env.REACT_APP_APIKEY,
 })
+
+console.log("Organization: ", process.env.REACT_APP_ORGANIZATION);
+console.log("Apikey: ", process.env.REACT_APP_APIKEY);
+console.log(process.env.NODE_ENV)
 
 const openai = new OpenAIApi(configuration);
 
@@ -61,7 +65,7 @@ function TecBot() {
   return (
     <main>
       <h1>TecBot</h1>
-
+           
       <section>
         {
           chats && chats.length ? (
