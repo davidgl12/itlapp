@@ -10,7 +10,6 @@ const configuration = new Configuration({
 console.log("Organization: ", process.env.REACT_APP_ORGANIZATION);
 console.log("Apikey: ", process.env.REACT_APP_APIKEY);
 console.log("GPT_ORGANIZATION: ", process.env);
-console.log("GPT_APIKEY: ", process.env);
 console.log(process.env.NODE_ENV)
 
 const openai = new OpenAIApi(configuration);
