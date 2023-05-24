@@ -4,7 +4,7 @@ import { WidthFull } from '@mui/icons-material';
 
 const configuration = new Configuration({
   organization: 'org-0XpXovab9tULjv34eRGiqx6C',
-  apiKey: process.env.APIKEY,
+  apiKey: process.env.REACT_APP_APIKEY,
 })
 
 console.log("Organization: ", process.env.REACT_APP_ORGANIZATION);
