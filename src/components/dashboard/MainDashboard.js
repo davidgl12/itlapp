@@ -20,6 +20,7 @@ export function MainDashboard() {
     const [alumno, setAlumno] = useState(null);
     const [cookies] = useCookies();
     const [flag, setFlag] = useState(0);
+    console.log('Algo bien');
 
     const handleClickReturn = () => {
         setFlag(0);
